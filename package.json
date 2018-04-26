@@ -38,11 +38,13 @@
     "test": "npm run type-check && jest",
     "type-check": "tsc --noEmit --pretty",
     "prettier": "prettier --write '{src,types}/**/*.ts'",
-    "sync-fixtures": "rsync -avh --delete --stats --progress ../relay/packages/relay-compiler/language/javascript/__tests__/fixtures/flow-generator/*.graphql test/fixtures/type-generator"
+    "sync-fixtures": "rsync -avh --delete --stats --progress ../relay/packages/relay-compiler/language/javascript/__tests__/fixtures/flow-generator/*.graphql test/fixtures/type-generator",
+    "postinstall": "postinstall-build lib"
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "invariant": "^2.2.2"
+    "invariant": "^2.2.2",
+    "postinstall-build": "^5.0.1"
   },
   "peerDependencies": {
     "relay-compiler": "*",
