@@ -28,9 +28,6 @@
     "url": "https://github.com/relay-tools/relay-compiler-language-typescript/issues"
   },
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "prepublish": "npm run build",
     "build": "rm -rf lib && tsc",
