@@ -30,7 +30,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rm -rf lib && tsc",
+    "build": "rimraf lib && tsc",
     "relay": "node bin/relay-compiler.js --schema test/schema.graphql --src test/ --outputDir __generated__",
     "test": "npm run type-check && jest",
     "type-check": "tsc --noEmit --pretty",
@@ -61,6 +61,7 @@
     "relay-compiler": "https://github.com/alloy/relay/releases/download/v1.5.0-plugin.3/relay-compiler-1.5.0-plugin.3.tgz",
     "relay-runtime": "https://github.com/alloy/relay/releases/download/v1.5.0-plugin.3/relay-runtime-1.5.0-plugin.3.tgz",
     "relay-test-utils": "https://github.com/alloy/relay/releases/download/v1.5.0-plugin.3/relay-test-utils-1.5.0-plugin.3.tgz",
+    "rimraf": "^2.6.2",
     "ts-jest": "^22.0.1",
     "typescript": "2.6.2"
   },
