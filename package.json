@@ -29,7 +29,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "build": "rimraf lib && tsc",
     "relay": "node bin/relay-compiler.js --schema test/schema.graphql --src test/ --outputDir __generated__",
     "test": "npm run type-check && jest",
