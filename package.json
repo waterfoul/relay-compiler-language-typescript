@@ -36,7 +36,7 @@
     "type-check": "tsc --noEmit --pretty",
     "prettier": "prettier --write '{src,types}/**/*.ts'",
     "sync-fixtures": "rsync -avh --delete --stats --progress ../relay/packages/relay-compiler/language/javascript/__tests__/fixtures/flow-generator/*.graphql test/fixtures/type-generator",
-    "postinstall": "postinstall-build lib"
+    "postinstall": "postinstall-build lib --script \"build -- --strict false\""
   },
   "dependencies": {
     "immutable": "^3.7.6",
